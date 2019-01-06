@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+    <title>JavaScriptModule</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+            <span class="navbar-brand mb-0 h1">Min-maths-Game (ver: 1.0.1)</span>
+    </nav>
+    <div class="container p-4">
+            <form id="gameform" method="POST" action="/api/info">
+                    <div class="form-group row">
+                      <label  for="playerName" class="col-sm-4 col-form-label">Player Name</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="playername" placeholder="Player Name" name="playername" required>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                            <label for="factor" class="col-sm-4 col-form-label">Email</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="factor" placeholder="abc@abc.com" name="playeremail" required>
+                            </div>
+                    </div>
+                    <div><input type="text" id="finlscore" name="finlscore" style="visibility: hidden;"></div>
+                    <div class="form-group row">
+                            <label for="numberOfProblems" class="col-sm-4 col-form-label">Numbers Of Problems</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="problemCount" placeholder="Number Of Problems">
+                            </div>
+                    </div>
+                
+
+                    <div class="row">
+                            <div class="col-8 m-auto m-0 p-3">
+                                    <div class="input-group">
+                                            <div id="game"></div>
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 m-auto">
+                            <button id="startGame" type="submit" class="btn btn-dark  btn-block" >Start Game</button>
+                        </div>
+                        <div class="col-4 m-auto">
+                                <button id="calculate" type="submit" class="btn btn-info btn-block">Calculate Score</button>
+                               
+                        </div>
+                        <div class="col-4 m-auto">
+                                <button data-toggle="tooltip" data-placement="top" title="City Beach Quiksilver Mens Molokai Thongs
+                                " id="SaveScore" type="submit" class="btn btn-success btn-block">Save & ebay</button>
+                                
+                        </div>
+                        <hr><hr>
+                        
+                    </div> 
+
+            </form>
+            
+      
+           
+
+            <div class="alert alert-light" role="alert" id="scores">
+                   <h3> Scoreboard </h3> <h4>No scores yet</h4>
+            </div>
+            <!-- <div class="form-horizontal" id="game"></div>
+
+            <div class="col-sm-offset-2 col-sm-10" id="scores"><h2>Scoreboard</h2><h4>No scores yet</h4></div> -->
+    </div>
+
+    <!-- <script data-main="js/app" src="node_modules/requirejs/require.js"></script> -->
+    <!-- <script src="node_modules/systemjs/dist/system.js.map"></script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script>
+        System.config({
+            meta: {
+                format: "cjs"
+            }
+        });
+        System.import("js/app");
+    </script> -->
+
+    <script>
+                $(function () {
+                  $('[data-toggle="tooltip"]').tooltip()
+                })
+                </script>
+
+    <script src='js/player.js' type="text/javascript"></script>
+    <script src='js/game.js' type="text/javascript"></script>
+    <script src='js/scoreboard.js' type="text/javascript"></script>
+    <script src='js/app.js' type="text/javascript"></script>
+<script type="text/javascript" >
+        var finelScore = document.getElementById("finlscore").value;
+         document.getElementById("finlscore2").value = finelScore;
+</script>
+
+        
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
